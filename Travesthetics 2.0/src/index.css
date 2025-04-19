@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'livvic';
+    src: url('/src/assets/fonts/Livvic-Regular.ttf');
+}
+
+@import "tailwindcss";
+
+
+@theme{
+    --font-livvic: livvic, "sans-serif";
+}
