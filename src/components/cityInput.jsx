@@ -20,7 +20,7 @@ const CityInput = () => {
       setLoading(true);
       setCitx(city);
 
-      const response = await axios.post("http://localhost:5000/api/findCity", {
+      const response = await axios.post("https://travesthetics.onrender.com/api/findCity", {
         city : city,
       });
       // console.log("Data received front", response.data);
