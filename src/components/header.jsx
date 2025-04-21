@@ -19,7 +19,7 @@ const Header = () => {
     <header className="bg-white font-livvic border-gray-200 p-3">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-        <img src="public\travel-101.svg" className="size-10" alt="My Logo" />
+        <img src="/travel-101.svg" className="size-10" alt="My Logo" />
 
           <div
             className="text-2xl font-bold ml-2 pb-2 text-gray-800 cursor-pointer"
