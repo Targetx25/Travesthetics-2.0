@@ -20,7 +20,7 @@ const Categories = () => {
     // console.log("placeID", passedCity.state.placeId);
     try {
       setLoading(true);
-      const response = await axios.post("https://travesthetics.onrender.com/api/getrec", {
+      const response = await axios.post("http://localhost:5000/api/getrec", {
         placeID : passedCity.state.placeId,
         category: e,
       });

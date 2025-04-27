@@ -5,9 +5,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-
+import { HeroUIProvider } from '@heroui/react';
 import App from './App.jsx';
-import HeroSection from './components/heroSection.jsx';
 import CityInput from './components/cityInput.jsx';
 import Home from './pages/Home.jsx';
 import CityList from './components/CityList.jsx';
@@ -62,8 +61,10 @@ const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <CityProvider>
-      <AppWithRouter />
-    </CityProvider>
+    <HeroUIProvider>
+      <CityProvider>
+        <AppWithRouter />
+      </CityProvider>
+    </HeroUIProvider>
   </React.StrictMode>
 );

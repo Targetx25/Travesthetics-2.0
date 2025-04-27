@@ -1,10 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import SlickButton from "./SlickButton";
 import Loader from "./Loader";
 import Error from "./Error";
 import { useCity } from "./CityContext";
+import { Button, ButtonGroup } from "@heroui/react";
 
 const CityInput = () => {
   const [city, setCity] = useState("");
@@ -20,7 +20,7 @@ const CityInput = () => {
       setLoading(true);
       setCitx(city);
 
-      const response = await axios.post("https://travesthetics.onrender.com/api/findCity", {
+      const response = await axios.post("http://localhost:5000/api/findCity", {
         city : city,
       });
       // console.log("Data received front", response.data);
@@ -77,12 +77,10 @@ const CityInput = () => {
                   className="w-75% md:w-[46%] p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 bg-white"
                   />
                   </form>
-                  <SlickButton
-                  onClick={handleSubmit}
-                  gradient="bg-gradient-to-r from-red-500 to-orange-500"
-                  >
-                    Submit
-                  </SlickButton>
+                  <Button color="success" onPress={handleSubmit } className = "bg-green-600 text-white font-semibold py-2 px-4 rounded-md">
+                          Submit
+                  </Button>
+                  
               </div>
           </div>
           <div className ="absolute text-white text-3xl md:text-[40px]  font-bold bottom-50">

@@ -1,8 +1,8 @@
 // src/components/HeroSection.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import SlickButton from "./SlickButton";
 import Loader from "./Loader";
+import { Button } from "@heroui/react";
 
 
 
@@ -41,15 +41,12 @@ const HeroSection = () => {
         Let’s Setup Your Trip
       </h1>
       <div className="flex gap-4 justify-between md:justify-center mt-10">
-      <SlickButton 
-      onClick={()=> navigate("/about")}
-      gradient="bg-gradient-to-r from-amber-500 to-pink-500"
-      >
+      <Button onPress={()=> navigate("/about")} color="primary" className="bg-[#FD5169] hover:bg-[#FD5169] text-white font-bold py-2 px-4 rounded">
         Why Us?
-        </SlickButton>
-        <SlickButton onClick={handleClick}>
-        Let’s Start
-        </SlickButton>
+      </Button>
+       <Button color="success" onPress={handleClick } className = "bg-blue-500 text-white font-bold py-2 px-4 rounded">
+        Lets Start
+       </Button>
       </div>
     </div>
    </div>
